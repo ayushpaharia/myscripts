@@ -1,0 +1,22 @@
+Error: unknown flag: --background
+Usage:
+  pritunl-client start [profile_id] [flags]
+
+Flags:
+  -h, --help              help for start
+  -m, --mode string       VPN mode (ovpn, wg)
+  -p, --password string   VPN password
+  -r, --password-read     Prompt for VPN password
+
+Error: cmd: Failed to execute root command
+unknown flag: --background
+ORIGINAL STACK TRACE:
+github.com/pritunl/pritunl-client-electron/cli/cmd.Execute
+	/pacur_build/src/pritunl-client-electron-1.3.3484.2/cli/cmd/root.go:22 +0x74c005
+main.main
+	/pacur_build/src/pritunl-client-electron-1.3.3484.2/cli/main.go:8 +0x74c8d6
+runtime.main
+	/usr/local/go/src/runtime/proc.go:250 +0x439b31
+runtime.goexit
+	/usr/local/go/src/runtime/asm_amd64.s:1594 +0x4677a0
+
