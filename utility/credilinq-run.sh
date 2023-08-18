@@ -36,7 +36,10 @@ new_tmux_session() {
   address=$(tmux display-message -p -F "#{pane_current_path}" -t 1)
 
   # Create a new window in the TMUX session and navigate to the address of the first pane
-  tmux new-window -n "LazyGit" -c "$address" "cd ~/Desktop/box/projects-by-org/credilinq/credilinq.api/ && lazygit"
+  # tmux new-window -n "LazyGit" -c "$address" "cd ~/Desktop/box/projects-by-org/credilinq/credilinq.api/ && lazygit"
+  tmux new-window -n "db" -c "$address" "cd ~/Desktop/box/projects-by-org/credilinq/credilinq-db/ && docker compose up"
+
+  code ~/Desktop/box/projects-by-org/credilinq/credilinq.code-workspace
 
   # Attach to the newly created TMUX session
   tmux attach-session -t "$session_name"
