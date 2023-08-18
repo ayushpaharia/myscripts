@@ -11,11 +11,11 @@ git config --global user.name "$1"
 git config --global user.email "$2"
 
 if [ "$3" == "default" ]; then
-  mv ~/.ssh/default/id* ~/.ssh/
+  cp ~/.ssh/default/id* ~/.ssh/
 fi
 
 if [ "$3" == "credilinq" ]; then
-  mv ~/.ssh/credilinq/id* ~/.ssh/
+  cp ~/.ssh/credilinq/id* ~/.ssh/
 fi
 
 # Confirm the new configurations
